@@ -1,0 +1,12 @@
+<h1 class='p-5'>New Review</h1>
+<div class='p-5'>
+<%= simple_form_for [@restaurant, @review]  do |f| %>
+  <%= f.error_notification %>
+    <%= f.input :content, label: "Describe your experience!"%>
+    <%= f.input :rating, label: "Give a rating from 0 to 5"%>
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary " %>
+  <%= link_to "Back", restaurants_path, class: 'btn btn-secondary' %>
+ </div>
+<% end %>

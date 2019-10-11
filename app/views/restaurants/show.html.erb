@@ -1,0 +1,11 @@
+<h1 class='p-5'>Restaurant details</h1>
+<div class='p-5'>
+<ul>
+    <li><strong> Restaurant name: </strong> <%= @restaurant.name%></li>
+    <li><strong> Restaurant address: </strong> <%= @restaurant.address%></li>
+    <li><strong> Restaurant category: </strong> <%= @restaurant.category%></li>
+</ul>
+	<%= link_to "Voltar", restaurants_path, class: 'btn btn-secondary m-5' %>
+
+	<%= link_to "Review", new_restaurant_review_path(@restaurant), class: 'btn btn-success m-5' %>
+</did>

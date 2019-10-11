@@ -1,0 +1,13 @@
+<h1 class='p-5'>New restaurant</h1>
+<div class='p-5'>
+<%= simple_form_for @restaurant  do |f| %>
+  <%= f.error_notification %>
+    <%= f.input :name, label: "Name"%>
+    <%= f.input :address, label: "Address"%>
+    <%= f.input :category, label: "Chinese, Italian, Japanese, French, Belgian"%>
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary " %>
+  <%= link_to "Back", restaurants_path, class: 'btn btn-secondary' %>
+ </div>
+<% end %>
